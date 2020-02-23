@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Dropedown from './Dropedown';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import 'bootstrap/dist/css/bootstrap.min.css';
+class   App extends Component {
+  constructor(props) {
+    super(props);
+  
+    this.state = {
+      data:[
+          {
+            AcountNumber:'123',
+            Amount:'100'
+          },
+          {
+            AcountNumber:'156',
+            Amount:'101'
+          }
+      ],
+      value:''
+    };
+  }
+  ChangeHandler=(event)=>{
+    console.log(event.target.name,'kkkkkkkkkkkkkkkkkkkkkkkkkkkk')
+    console.log(this.state.value,'oooooooooooooooooooooooooooooooo')
+       this.setState({value:event.target.name})
+     }
+  render(){
+    return (
+      <div className="App">
+       <Dropedown ChangeHandler={this.ChangeHandler} data={this.state.data}value={this.state.value}  />
+      </div>
+    ); 
+  }
+ 
 }
 
 export default App;
