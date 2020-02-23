@@ -13,7 +13,7 @@ class   App extends Component {
             Amount:'100'
           },
           {
-            AcountNumber:'156',
+            AcountNumber:'1564555',
             Amount:'101'
           }
       ],
@@ -21,7 +21,7 @@ class   App extends Component {
     };
   }
   ChangeHandler=(event)=>{
-    console.log(event.target.name,'kkkkkkkkkkkkkkkkkkkkkkkkkkkk')
+    console.log(event.target.name,'kkkkkkkkkkkkkkkkkkkkkkkkkkkkKKKKKKKKKK')
     console.log(this.state.value,'oooooooooooooooooooooooooooooooo')
        this.setState({value:event.target.name})
      }
